@@ -7,13 +7,7 @@ return require('packer').startup(function(use)
         'nvim-lualine/lualine.nvim',
         requires = { 'kyazdani42/nvim-web-devicons', opt = true }
     }
-    use {
-        'nvim-tree/nvim-tree.lua',
-        requires = {
-            'nvim-tree/nvim-web-devicons', -- optional, for file icons
-            },
-        tag = 'nightly' -- optional, updated every week. (see issue #1193)
-    }
+    use 'nvim-tree/nvim-web-devicons'
     use {
         'nvim-telescope/telescope.nvim',
         requires = { {'nvim-lua/plenary.nvim', 'BurntSushi/ripgrep', 'sharkdp/fd'} }
@@ -21,4 +15,19 @@ return require('packer').startup(function(use)
     use {'nvim-telescope/telescope-fzf-native.nvim', run = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' }
     use { "nvim-telescope/telescope-file-browser.nvim" }
     use 'nvim-treesitter/nvim-treesitter'
+    use 'numToStr/Comment.nvim'
+    use 'akinsho/toggleterm.nvim'
+
+    use 'hrsh7th/nvim-cmp'
+    use 'hrsh7th/cmp-buffer'
+    use 'hrsh7th/cmp-path'
+    use 'saadparwaiz1/cmp_luasnip'
+    
+    -- Snippets
+    use 'L3MON4D3/LuaSnip'
+    use 'rafamadriz/friendly-snippets'
+
+    -- Bufferline
+    use 'akinsho/bufferline.nvim'
+    use 'moll/vim-bbye'
 end)
