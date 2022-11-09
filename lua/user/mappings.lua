@@ -3,19 +3,19 @@ vim.g.mapleader = ' '
 
 vim.keymap.set("i", "jj", "<Esc>")
 
+--  Opening new windows
+vim.keymap.set("n", "<A-v>", ":vsplit<cr>")
+vim.keymap.set("n", "<A-b>", ":split<cr>")
+
 vim.keymap.set("n", "<C-h>", "<C-W>h")
 vim.keymap.set("n", "<C-j>", "<C-W>j")
 vim.keymap.set("n", "<C-k>", "<C-W>k")
 vim.keymap.set("n", "<C-l>", "<C-W>l")
 
---  Opening new windows
-vim.keymap.set("n", "<A-v>", ":vsplit<cr>")
-vim.keymap.set("n", "<A-h>", ":split<cr>")
-
 -- Managing tabs
 vim.keymap.set("n", "<A-t>", ":tabnew<cr>")
-vim.keymap.set("n", "<S-k>", ":tabp<cr>")
-vim.keymap.set("n", "<S-j>", ":tabn<cr>")
+vim.keymap.set("n", "<A-l>", ":tabn<cr>")
+vim.keymap.set("n", "<A-h>", ":tabp<cr>")
 
 -- Buffer management
 vim.keymap.set("n", "<S-l>", ":bn<cr>")
