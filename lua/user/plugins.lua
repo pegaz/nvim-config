@@ -24,9 +24,6 @@ return require('packer').startup(function(use)
     -- Comments handling
     use 'numToStr/Comment.nvim'
 
-    -- ToggleTerm
-    use 'akinsho/toggleterm.nvim'
-
     -- Completion
     use 'hrsh7th/nvim-cmp'
     use 'hrsh7th/cmp-buffer'

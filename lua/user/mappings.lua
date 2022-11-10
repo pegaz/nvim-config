@@ -24,19 +24,14 @@ vim.keymap.set("n", "<S-h>", ":bp<cr>")
 -- Telescope-related keymaps
 local builtin = require("telescope.builtin")
 
-vim.keymap.set("n", "ff", 
+vim.keymap.set("n", "<leader>ff", 
     function()
         builtin.find_files({
             no_ignore = false,
             hidden = true
         })
     end)
-vim.keymap.set("n", "fg", function() builtin.live_grep() end)
-vim.keymap.set("n", "fb", function() builtin.buffers() end)
-
-local file_browser = require("telescope").extensions.file_browser
-
+vim.keymap.set("n", "<leader>fg", function() builtin.live_grep() end)
+vim.keymap.set("n", "<leader>fb", function() builtin.buffers() end)
 vim.keymap.set("n", "<leader>fb", function() require("telescope").extensions.file_browser.file_browser() end)
 
-vim.keymap.set("n", "<leader>t", ":exe v:count1 . 'ToggleTerm'<cr>")
-vim.keymap.set("i", "<leader>t", "<Esc>:exe v:count1 . 'ToggleTerm'<cr>")
