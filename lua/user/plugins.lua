@@ -2,6 +2,9 @@ return require('packer').startup(function(use)
     -- Packer can manage itself
     use 'wbthomason/packer.nvim'
 
+    -- impatient for faster lua modules loading
+    use 'lewis6991/impatient.nvim'
+
     -- Theme
     use 'morhetz/gruvbox'
 
@@ -19,7 +22,10 @@ return require('packer').startup(function(use)
     }
     use {'nvim-telescope/telescope-fzf-native.nvim', run = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' }
     use { 'nvim-telescope/telescope-file-browser.nvim' }
-    use 'nvim-treesitter/nvim-treesitter'
+    use { 
+        'nvim-treesitter/nvim-treesitter',
+        run = ':TSUpdate'
+    }
 
     -- Comments handling
     use 'numToStr/Comment.nvim'

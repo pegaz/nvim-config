@@ -4,7 +4,6 @@ require('user.bufferline')
 require("user.telescope")
 require("user.cmp")
 require("user.comment")
-require("user.toggleterm")
 require('user.mappings')
 require('user.colors')
 

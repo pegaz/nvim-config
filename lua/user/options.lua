@@ -3,6 +3,8 @@
 -- Disable compatibility with vi which can cause unexpected issues.
 vim.o.compatible = false
 
+-- vim.g.loaded_netrw = 1
+-- vim.g.loaded_netrwPlugin = 1
 -- Enable type file detection. Vim will be able to try to detect the type of file in use.
 -- filetype on
 
@@ -82,4 +84,6 @@ vim.g.loader_netwrPlugin = 1
 
 -- Set termguicolors to enable highlight groups
 vim.o.termguicolors = true
+
+require('impatient')
 
