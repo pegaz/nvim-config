@@ -85,5 +85,8 @@ vim.g.loader_netwrPlugin = 1
 -- Set termguicolors to enable highlight groups
 vim.o.termguicolors = true
 
+vim.o.mousemodel = "extend"
+vim.o.clipboard = "unnamedplus"
+
 require('impatient')
 

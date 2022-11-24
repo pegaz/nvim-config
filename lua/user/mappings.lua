@@ -21,6 +21,10 @@ vim.keymap.set("n", "<A-h>", ":tabp<cr>")
 vim.keymap.set("n", "<S-l>", ":bn<cr>")
 vim.keymap.set("n", "<S-h>", ":bp<cr>")
 
+-- Builtin terminal
+vim.keymap.set("t", "<Esc>", "<C-\\><C-n>")
+vim.keymap.set("t", "jj", "<C-\\><C-n>")
+
 -- Telescope-related keymaps
 local builtin = require("telescope.builtin")
 
